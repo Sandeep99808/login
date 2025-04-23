@@ -1,0 +1,236 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #3e1c77, #4f2d7f);
+  }
+  
+  .login-container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    height: 80%;
+    background-color: #1a1a3d;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .login-left, .login-right {
+    flex: 1;
+    padding: 40px;
+    color: white;
+  }
+  
+  .login-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a3d;
+  }
+  
+  .avatar {
+    border: 2px solid cyan;
+    border-radius: 50%;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .login-left input {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #888;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 50px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .login-left input::placeholder {
+    color: #bbb;
+  }
+  
+  .login-left button {
+    background-color: #ff3399;
+    border: none;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  .login-left button:hover {
+    background-color: #e02687;
+  }
+  
+  .form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+  
+  .form-footer label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .form-footer a {
+    color: cyan;
+    text-decoration: none;
+  }
+  
+  .login-right {
+    background-color: #1d1a39;
+    position: relative;
+  }
+  
+  .nav-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+  
+  .sign-in {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .welcome-message {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+  }
+  
+  .welcome-message h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-message p {
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  
+  .popup-success {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    animation: fadeInOut 3s ease-in-out forwards;
+    z-index: 1000;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+      height: auto;
+      margin: 20px;
+    }
+  
+    .login-left, .login-right {
+      padding: 20px;
+    }
+  
+    .welcome-message h1 {
+      font-size: 2rem;
+    }
+  
+    .login-left input, .login-left button {
+      padding: 10px;
+    }
+  
+    .nav-bar {
+      top: 10px;
+      right: 10px;
+      gap: 10px;
+    }
+  
+    .avatar {
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-left, .login-right {
+      padding: 15px;
+    }
+  
+    .welcome-message h1 {
+      font-size: 1.6rem;
+    }
+  
+    .welcome-message p {
+      font-size: 0.8rem;
+    }
+  
+    .form-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .nav-bar {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+  
+    .popup-success {
+      font-size: 0.85rem;
+      padding: 10px 15px;
+    }
+  }
+  
